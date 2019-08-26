@@ -1,0 +1,36 @@
+.btn_add_item {
+    margin-left: auto;
+    //  width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #f90d4e;
+    border: 1.5px solid #f90d4e;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px -3px;
+    img {
+        margin: auto;
+        width: 100%;
+    }
+}
+
+.cont_img {
+    img {
+        width: 150px;
+    }
+}
+
+.item_table {
+    height: auto;
+}
+
+.card_table_body {
+    height: auto;
+}

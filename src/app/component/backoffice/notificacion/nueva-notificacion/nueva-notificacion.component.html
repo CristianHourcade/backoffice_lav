@@ -1,0 +1,99 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-12  mt-4 d-flex card_warning ">
+            <a>Estás por agregar una nueva oferta </a>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="form_add_off py-3">
+                <div class="text-center">
+                    <a class="text-danger h3 ">Oferta para clientes</a>
+                </div>
+                <div class="cont_input my-3">
+                    <div class="row" style="padding: 0px 10%">
+                        <div class="col-4 item_to_select_img_off {{(icon === 1)?'item_select':''}} px-3 py-3" (click)="icon = 1">
+                            <img src="/assets/share_item/fashion.png">
+                        </div>
+                        <div class="col-4 item_to_select_img_off px-3 py-3 {{(icon === 2)?'item_select':''}}" (click)="icon = 2">
+                            <img src="/assets/share_item/laundry.png ">
+                        </div>
+                        <div class="col-4 item_to_select_img_off px-3 py-3 {{(icon === 3)?'item_select':''}}" (click)="icon = 3">
+                            <img src="/assets/share_item/colores.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_input">
+                    <input type="text" placeholder="Titulo de la oferta" name="title" [(ngModel)]="notification.title">
+                </div>
+
+
+                <div class="cont_input">
+                    <textarea type="text" placeholder="Descripción de la oferta" name="title" [(ngModel)]="notification.body"></textarea>
+                </div>
+
+                <div class="cont_input">
+                    <select (change)="Oferta.descuento = $event.target.value">
+                                <option>¿De cuanto es el la oferta?</option>
+                                <option>5%</option>
+                                <option>10%</option>
+                                <option>15%</option>
+                                <option>20%</option>
+                                <option>25%</option>
+                                <option>30%</option>
+                                <option>35%</option>
+                                <option>40%</option>
+                                <option>45%</option>
+                                <option>50%</option>
+                                <option>60%</option>
+                                <option>70%</option>
+                                <option>80%</option>
+                                <option>90%</option>
+                                <option>Gratis</option>
+                            </select>
+                </div>
+                <div class="cont_input">
+                    <select (change)="productSelected = $event.target.value">
+                                <option>Seleccioná producto</option>
+                                <option>Valet</option>
+                                <option>Acolchado</option>
+                                <option>Secado</option>
+                                <option>Zapatillas</option>
+                            </select>
+                </div>
+
+                <div class="cont_input">
+                    <a class="mx-auto mt-4">¿A quién va dirijido?</a>
+                </div>
+                <div class="cont_input">
+                    <select (change)="targetChange($event.target.value)">
+                        <option>Seleccioná una opción</option>
+                        <option>A todos los clientes</option>
+                        <option>Filtrar por frecuencia</option>
+                        <option>Filtrar por puntos</option>
+                        <option> Por puntos y frecuencia</option>
+                    </select>
+                </div>
+                <div class="mt-4" style="padding-left:5%;padding-right: 5%;" *ngIf="target !== 'Seleccioná una opción' && target !== 'A todos los clientes'">
+                    <p><b>Completá el siguiente texto</b></p>
+
+                    <p *ngIf="target === 'Filtrar por frecuencia'">Está oferta está dedicada a todos los clientes que no vienen a mi negocio desde hace: <input class=" ml-2 change_value" type="number" [(ngModel)]="diasFrecuencia" placeholder="Dias">.</p>
+                    <p *ngIf="target === 'Filtrar por puntos'">Está oferta está dedicada a todos los clientes que tienen más puntos que: <input class=" ml-2 change_value" type="number" placeholder="Puntos">.</p>
+
+                    <p *ngIf="target === 'Por puntos y frecuencia'">Está oferta está dedicada a todos los clientes que no vienen a mi negocio desde hace: <input class=" ml-2 change_value" type="number" placeholder="Dias">. Y también a todos los clientes que tienen más puntos que: <input class=" ml-2 change_value"
+                            type="number" placeholder="Puntos">.</p>
+                </div>
+
+
+                <div class="cont_input">
+                    <input type="number" placeholder="¿Cuantos puntos vale esta oferta?" name="title" [(ngModel)]="Oferta.puntos">
+                </div>
+
+                <div class="cont_input">
+                    <input type="number" placeholder="¿Por cuantos dias?" name="title" [(ngModel)]="Oferta.dias">
+                </div>
+                <p style="padding-left:5%;padding-right: 5%;"><button class="btn-primary mt-3 w100" (click)="sendNotification()">AGREGAR</button></p>
+            </div>
+        </div>
+    </div>
+</div>

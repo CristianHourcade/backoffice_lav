@@ -1,0 +1,56 @@
+<nav class="navbar_backoffice">
+    <div class="container">
+        <div class="row card_item_nav" routerLink="dashboard" [ngClass]="(getRouterActive()==='dashboard')?'active_card':''">
+            <div class="item_seleccionado" [ngClass]="(getRouterActive()==='dashboard')?'active_item':''" *ngIf="getRouterActive() === 'dashboard'"></div>
+
+
+            <div class="col-12">
+                <img src="/assets/layout.png" class="logo">
+                <a> Panel de inicio</a>
+            </div>
+        </div>
+        <div class="row card_item_nav" routerLink="economy" [ngClass]="(getRouterActive()==='economy')?'active_card':''">
+            <div class="item_seleccionado" *ngIf="getRouterActive() === 'economy'" [ngClass]="(getRouterActive()==='economy')?'active_item':''"></div>
+
+
+            <div class="col-12">
+                <img src="/assets/economy.png" class="logo">
+                <a> Contabilidad</a>
+            </div>
+        </div>
+
+        <div class="row card_item_nav" routerLink="clientes" [ngClass]="(getRouterActive()==='clientes')?'active_card':''">
+            <div class="item_seleccionado" *ngIf="getRouterActive() === 'clientes'" [ngClass]="(getRouterActive()==='clientes')?'active_item':''"></div>
+
+
+
+            <div class="col-12">
+                <img src="/assets/card.png" class="logo">
+                <a> Clientes</a>
+            </div>
+        </div>
+        <div class="row card_item_nav" routerLink="notificacion" [ngClass]="(getRouterActive()==='notificacion')?'active_card':''">
+            <div class="item_seleccionado" *ngIf="getRouterActive() === 'notificacion'" [ngClass]="(getRouterActive()==='notificacion')?'active_item':''"></div>
+
+
+            <div class="col-12">
+                <img src="/assets/notification.png" class="logo">
+                <a> Notificaciones</a>
+            </div>
+        </div>
+
+        <div class="row card_item_nav" routerLink="scanner" [ngClass]="(getRouterActive()==='scanner')?'active_card':''">
+            <div class="item_seleccionado" *ngIf="getRouterActive() === 'scanner'" [ngClass]="(getRouterActive()==='scanner')?'active_item':''"></div>
+
+
+            <div class="col-12">
+                <img src="/assets/photo-camera.png" class="logo">
+                <a> Agregar</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div id="content_backoffice">
+    <router-outlet></router-outlet>
+</div>

@@ -1,1 +1,170 @@
 /* You can add global styles to this file, and also import other style files */
+
+.h100 {
+    height: 100%;
+}
+
+.btn-primary {
+    background-color: #f90f4e;
+    color: white;
+    padding: 13px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 5px -1px #f90f4e9e;
+    font-weight: bold;
+    border: 0;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #f90f4e;
+    padding: 13px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 5px -1px #f90f4e9e;
+    font-weight: bold;
+    border: 1px solid #f90f4e;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.card_primary {
+    background: #dc3545;
+    min-height: 20vh;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px -4px #dc3545;
+    padding: 15px;
+}
+
+.content_icon_primary {
+    background: #e66c7875;
+    padding: 10px;
+    border-radius: 100%;
+    width: 6vw;
+    height: 6vw;
+    img {
+        width: 100%;
+    }
+}
+
+.title_card_info {
+    text-align: end;
+    color: white;
+    font-size: 2vw;
+    a {
+        font-weight: bolder;
+    }
+}
+
+.card_secondary {
+    background: white;
+    border: 1px solid #dc3545;
+    min-height: 20vh;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px -4px #dc3545;
+}
+
+.title_card_info_secondary {
+    text-align: end;
+    color: #dc3545;
+    font-size: 2vw;
+    a {
+        font-weight: bolder;
+    }
+}
+
+.text-muted_sc {
+    color: #db4554!important;
+}
+
+.text-muted {
+    color: #e0e0e0!important;
+}
+
+p {
+    margin-bottom: 0px!important;
+}
+
+.data_ingreso {
+    font-size: 2.5vw;
+    font-weight: bold;
+    img {
+        width: 50px;
+        filter: invert(1);
+    }
+    b {
+        font-size: 4vw;
+    }
+}
+
+.w50 {
+    width: 49.5%;
+}
+
+.card_table {
+    box-shadow: 0px 0px 8px -5px;
+    border-radius: 10px;
+}
+
+.item_table {
+    margin: 15px;
+    background: white;
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    height: 65px;
+    box-shadow: 0px 0px 14px -9px;
+    border-radius: 10px;
+    div {
+        display: inline;
+    }
+    img {
+        height: 100%;
+    }
+}
+
+.card_table_header {
+    background: #dc3545;
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card_table_body {
+    background-color: #fbfbfb;
+    height: 45vh;
+    overflow: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.down_arrow {
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 10px);
+    width: 20px!important;
+    height: 20px!important;
+}
+
+.title_notification {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/** RESPONSIVE **/
+
+@media screen and (max-width:768px) {
+    .content_icon_primary {
+        width: 75px;
+        height: 75px;
+    }
+    .title_card_info,
+    .title_card_info_secondary {
+        font-size: 5vw;
+    }
+    .card_table_header {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,30 @@
+<div id="login_app">
+    <header>
+        <div class="circulo_logo mx-auto mt-auto"></div>
+    </header>
+    <section id="section_login">
+        <form #form="ngForm" autocomplete="off">
+            <div class="triangulo"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mt-1 text-center">
+                        <h2>¡Bienvenido al administrador!</h2>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="text" name="email" #userEmail="ngModel" [(ngModel)]="CFDataBase.formData.email" placeholder="Ingresá tu nombre de usuario">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <input type="password" name="pas" #userPassword="ngModel" [(ngModel)]="CFDataBase.formData.password" placeholder="Ingresá tu contraseña">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="btn-primary" (click)="registrarUsuario(form)">REGISTRAR USUARIO</button>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="btn-secondary">OLVIDE MI CUENTA</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        {{CFDataBase.formData.password}}
+    </section>
+</div>
